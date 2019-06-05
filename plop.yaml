@@ -5,17 +5,20 @@ metadata:
   labels:
     app: deploy2
     role: backend
+    change: test
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: deploy2
       role: backend
+      change: test
   template:
     metadata:
       labels:
         app: deploy2
         role: backend
+        change: test
     spec:
       containers:
       - name: testserver2
