@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jpetstorefront
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jpetstorefront
+    spec:
+      containers:
+      - name: jpetstorefront
+        image: wingardiumleviosa/petstorefront:11
+        env:
+          - name: PETSTORE_PORT
+            value: "80"
+        ports:
+        - containerPort: 3000
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 10
+          periodSeconds: 5
