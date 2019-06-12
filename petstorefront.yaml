@@ -1,3 +1,4 @@
+---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
@@ -12,10 +13,10 @@ spec:
     spec:
       containers:
       - name: jpetstorefront
-        image: wingardiumleviosa/petstorefront:11
+        image: wingardiumleviosa/petstorefront:24
         env:
-          - name: PETSTORE_PORT
-            value: "80"
+        - name: PETSTORE_PORT
+          value: "80"
         ports:
         - containerPort: 3000
         readinessProbe:
