@@ -1,27 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: testserver2
+  name: testserver
   labels:
-    app: deploy2
-    role: backend
-    change: test
+    app: deploy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: deploy2
-      role: backend
-      change: ilikecats
+      app: deploy
   template:
     metadata:
       labels:
-        app: deploy2
-        role: backend
-        change: ilikecats
+        app: deploy
     spec:
       containers:
-      - name: testserver2
+      - name: testserver
         image: wingardiumleviosa/testserver:v1
         ports:
         - containerPort: 3000
@@ -29,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: testserver2
+  name: testserver
 spec:
   ports:
   - port: 3000
@@ -37,4 +31,4 @@ spec:
     protocol: TCP
     name: http
   selector:
-    app: deploy2
+    app: deploy
