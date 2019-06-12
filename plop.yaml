@@ -5,20 +5,20 @@ metadata:
   labels:
     app: deploy2
     role: backend
-    change: hello
+    change: ilikecats
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: deploy2
       role: backend
-      change: hello
+      change: ilikecats
   template:
     metadata:
       labels:
         app: deploy2
         role: backend
-        change: hello
+        change: ilikecats
     spec:
       containers:
       - name: testserver2
