@@ -4,6 +4,9 @@ kind: Deployment
 metadata:
   name: jpetstorefront
   namespace: default
+  annotations:
+    flux.weave.works/locked_user: Your Name <you@example.com>
+    flux.weave.works/locked: 'true'
 spec:
   replicas: 1
   template:
