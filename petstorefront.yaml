@@ -5,7 +5,7 @@ metadata:
   name: jpetstorefront
   namespace: default
   annotations:
-    flux.weave.works/tag.jpetstorefront: glob:prod-*
+    flux.weave.works/tag.jpetstorefront: glob:22
     flux.weave.works/automated: 'true'
 spec:
   replicas: 1
