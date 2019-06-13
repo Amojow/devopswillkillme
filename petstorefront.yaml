@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: jpetstorefront
-        image: wingardiumleviosa/petstorefront:11
+        image: wingardiumleviosa/petstorefront:22
         env:
         - name: PETSTORE_PORT
           value: "80"
