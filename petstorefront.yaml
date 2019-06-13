@@ -6,6 +6,7 @@ metadata:
   namespace: default
   annotations:
     flux.weave.works/tag.jpetstorefront: glob:prod-*
+    flux.weave.works/automated: 'true'
 spec:
   replicas: 1
   template:
