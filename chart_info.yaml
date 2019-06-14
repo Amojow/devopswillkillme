@@ -12,3 +12,6 @@ spec:
     git: git@github.com:Docteur-RS/devopswillkillme.git
     path: charts/minecraft
     ref: master
+  values:
+    minecraftServer:
+      eula: "TRUE"
