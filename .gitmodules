@@ -1,7 +1,0 @@
-[submodule "mysubmodule"]
-	path = mysubmodule
-	url = https://github.com/Docteur-RS/mysubmodule.git
-[submodule "devopswillkillme"]
-	path = devopswillkillme
-	url = https://github.com/Docteur-RS/devopswillkillme.git
-	branch = master
