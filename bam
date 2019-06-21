@@ -1,0 +1,5 @@
+git submodule deinit mysubmodule
+git rm mysubmodule
+git commit -m "Removed submodule "
+rm -rf .git/modules/mysubmodule
+git push origin master
